@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <div class="outer">
+            <div class="inner">
+                <div class="box">Hello World!</div>
+                <div class="toolbox">
+                    <textarea id="input"></textarea>
+                    <div class="save">Save</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="dom-to-image.min.js"></script>
+    <script src="FileSaver.min.js"></script>
+    <script>
+        const $ = query => document.querySelector(query);
+        $("#input").oninput = () => $(".box").innerText = $("#input").value;
+        $(".save").onclick = () => domtoimage.toPng($(".box"))
+            .then(data => {
+                window.saveAs(data, "result".png);
+                console.log(data);
+            });
+    </script>
+</html>

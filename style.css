@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "NotoSansJP";
+    src: url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.otf) format("opentype");
+}
+
+* * {
+    padding: 0px;
+    margin: 0px;
+    font-family: "NotoSansJP";
+}
+
+.outer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    height: 630px;
+    box-shadow: #fff 0px 0px 16px inset;
+    background-color: #fbc;
+    color: #fff;
+    font-size: 64px;
+    text-shadow: #fab 4px 4px;
+}
+
+.toolbox {
+    width: 1200px;
+    margin-top: 8px;
+    position: relative;
+    display: flex;
+}
+
+textarea {
+    padding: 8px;
+    font-size: 32px;
+    border: solid 1px #777;
+    width: 75%;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.save {
+    background-color: #fbc;
+    box-shadow: #fff 0px 0px 16px inset;
+    margin-left: 5%;
+    width: 20%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    user-select: none;
+    cursor: pointer;
+    transition-duration: 256ms;
+}
+
+.save:hover {
+    box-shadow: #fff 0px 0px 32px inset;
+}

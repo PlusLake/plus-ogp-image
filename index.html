@@ -2,7 +2,6 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
-
     <body>
         <div class="outer">
             <div class="inner">
@@ -18,7 +17,7 @@
     <script src="FileSaver.min.js"></script>
     <script>
         const $ = query => document.querySelector(query);
-        $("#input").oninput = () => $(".box").innerText = $("#input").value;
+        $("#input").oninput = () => $(".box").innerHTML = $("#input").value;
         $(".save").onclick = () => domtoimage.toPng($(".box"))
             .then(data => {
                 window.saveAs(data, "result".png);
